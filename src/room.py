@@ -2,11 +2,12 @@
 # description attributes.
 
 class Room:
-    def __init__(self, name, desc):
+    def __init__(self, name, desc, items):
         self.name = name
         self.desc = desc
+        self.items = items
 
-    def check_room(self, dire):
+    def move_room(self, dire):
         if dire == 'n':
             if hasattr(self, 'n_to'):
                 return self.n_to
@@ -23,27 +24,3 @@ class Room:
             return 'Quit'
         else:
             return None
-
-            # def north(self):
-            #     if self.n_to:
-            #         return self.n_to
-            #     else:
-            #         return False
-
-            # def south(self):
-            #     if self.s_to:
-            #         return self.s_to
-            #     else:
-            #         return False
-
-            # def east(self):
-            #     if self.e_to:
-            #         return self.e_to
-            #     else:
-            #         return False
-
-            # def west(self):
-            #     if self.w_to:
-            #         return self.w_to
-            #     else:
-            #         return False
