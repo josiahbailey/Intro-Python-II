@@ -20,7 +20,5 @@ class Room:
         elif dire == 'w':
             if hasattr(self, 'w_to'):
                 return self.w_to
-        elif dire == 'q':
-            return 'Quit'
         else:
             return None

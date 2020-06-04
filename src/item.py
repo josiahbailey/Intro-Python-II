@@ -6,7 +6,8 @@ class Item:
 
 class Consumable(Item):
     def __init__(self, name, effect):
-        super().__init__(name, effect)
+        super().__init__(name)
+        self.effect = effect
         self.type = 'consumable'
         """
         name = "potion"
@@ -18,7 +19,8 @@ class Consumable(Item):
 
 class Equipment(Item):
     def __init__(self, name, effect):
-        super().__init__(name, effect)
+        super().__init__(name)
+        self.effect = effect
         self.type = 'equipment'
         """
         name = "helmet"
